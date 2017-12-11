@@ -1,6 +1,6 @@
 package com.example.bwie.com.songdechuan20171112.model;
 
-import com.example.bwie.com.songdechuan20171112.DatasBean;
+import com.example.bwie.com.songdechuan20171112.bean.DatasBean;
 import com.example.bwie.com.songdechuan20171112.bean.MessageBean;
 import com.example.bwie.com.songdechuan20171112.presenter.NewsPresenter;
 import com.example.bwie.com.songdechuan20171112.utils.RetrofitUtils;

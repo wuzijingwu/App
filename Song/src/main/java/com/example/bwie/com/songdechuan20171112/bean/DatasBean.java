@@ -1,4 +1,4 @@
-package com.example.bwie.com.songdechuan20171112;
+package com.example.bwie.com.songdechuan20171112.bean;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.bwie.com.songdechuan20171112;
+package com.example.bwie.com.songdechuan20171112.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,14 +9,15 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.bwie.com.songdechuan20171112.bean.DatasBean;
 import com.example.bwie.com.songdechuan20171112.Event.MessageEvent;
 import com.example.bwie.com.songdechuan20171112.Event.PriceAndCountEvent;
 import com.example.bwie.com.songdechuan20171112.Event.SomeId;
+import com.example.bwie.com.songdechuan20171112.R;
 import com.example.bwie.com.songdechuan20171112.adapter.MyAdapter;
 import com.example.bwie.com.songdechuan20171112.bean.MessageBean;
 import com.example.bwie.com.songdechuan20171112.presenter.DelPresenter;
 import com.example.bwie.com.songdechuan20171112.presenter.NewsPresenter;
-import com.example.bwie.com.songdechuan20171112.view.Iview;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

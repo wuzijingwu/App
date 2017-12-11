@@ -1,4 +1,4 @@
-package com.example.bwie.com.songdechuan20171112;
+package com.example.bwie.com.songdechuan20171112.view;
 
 
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.bwie.com.songdechuan20171112.R;
 
 /**
  * Created by SDC on 2017/12/11.

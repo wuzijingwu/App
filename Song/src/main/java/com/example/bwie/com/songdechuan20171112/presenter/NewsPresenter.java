@@ -1,6 +1,6 @@
 package com.example.bwie.com.songdechuan20171112.presenter;
 
-import com.example.bwie.com.songdechuan20171112.DatasBean;
+import com.example.bwie.com.songdechuan20171112.bean.DatasBean;
 import com.example.bwie.com.songdechuan20171112.bean.MessageBean;
 import com.example.bwie.com.songdechuan20171112.model.NewsModel;
 import com.example.bwie.com.songdechuan20171112.view.Iview;

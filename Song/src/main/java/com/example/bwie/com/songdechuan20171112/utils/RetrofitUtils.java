@@ -1,7 +1,6 @@
 package com.example.bwie.com.songdechuan20171112.utils;
 
-import com.example.bwie.com.songdechuan20171112.ApiService;
-import com.example.bwie.com.songdechuan20171112.LoggingInterceptor;
+import com.example.bwie.com.songdechuan20171112.api.ApiService;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

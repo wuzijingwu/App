@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bwie.com.songdechuan20171112.AddDeleteView;
-import com.example.bwie.com.songdechuan20171112.DatasBean;
+import com.example.bwie.com.songdechuan20171112.view.AddDeleteView;
+import com.example.bwie.com.songdechuan20171112.bean.DatasBean;
 import com.example.bwie.com.songdechuan20171112.Event.MessageEvent;
 import com.example.bwie.com.songdechuan20171112.Event.PriceAndCountEvent;
 import com.example.bwie.com.songdechuan20171112.Event.SomeId;
