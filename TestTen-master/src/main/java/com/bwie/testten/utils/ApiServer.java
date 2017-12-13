@@ -8,8 +8,6 @@ import com.bwie.testten.classify.bean.TwoBean;
 import com.bwie.testten.home.Bean.BannerBean;
 import com.bwie.testten.mine.bean.LoginBean;
 import com.bwie.testten.mine.bean.SignUpBean;
-import com.bwie.testten.shopcar.bean.DeleteBean;
-import com.bwie.testten.shopcar.bean.ShopCarBean;
 
 import java.util.Map;
 
@@ -45,9 +43,9 @@ public interface ApiServer {
     @POST
     Observable<AddBean> getAdd(@Url String url, @QueryMap Map<String,String> map);
 
-    @POST
-    Observable<ShopCarBean> getcatlist(@Url String url, @QueryMap Map<String,String> map);
-
-    @POST
-    Observable<DeleteBean> getdeta(@Url String url, @QueryMap Map<String,String> map);
+//    @POST
+//    Observable<ShopCarBean> getcatlist(@Url String url, @QueryMap Map<String,String> map);
+//
+//    @POST
+//    Observable<DeleteBean> getdeta(@Url String url, @QueryMap Map<String,String> map);
 }

@@ -13,14 +13,9 @@ import android.widget.TextView;
 import com.bwie.testten.R;
 import com.bwie.testten.mine.LoginConstract;
 import com.bwie.testten.mine.bean.LoginBean;
-import com.bwie.testten.mine.bean.LoginEvent;
 import com.bwie.testten.mine.presenter.LoginPresenter;
 import com.bwie.testten.utils.Api;
 import com.bwie.testten.utils.Toasts;
-
-import org.greenrobot.eventbus.EventBus;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -77,7 +72,7 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.I
                 .putString("name", db.getUsername())
                 .putString("pwd", db.getPassword())
                 .commit();
-       Toasts.showLong(this, "登录成功");
+        Toasts.showLong(this, "登录成功");
         finish();
     }
 

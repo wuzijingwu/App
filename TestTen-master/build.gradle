@@ -18,6 +18,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+
+}
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
 }
 
 dependencies {
@@ -37,7 +52,6 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.jakewharton:butterknife:8.2.1'
     compile 'com.hjm:BottomTabBar:1.1.1'
     compile 'com.facebook.fresco:fresco:1.5.0'
     compile 'com.xhb:xbanner:1.3.0'
@@ -49,4 +63,21 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     compile files('libs/alipaySdk-20170725.jar')
     compile 'org.xutils:xutils:3.5.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:1.0.6'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    testCompile 'junit:junit:4.12'
+    compile 'org.xutils:xutils:3.5.0'
+    compile(name: 'ijkplayer-java-release', ext: 'aar')
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:design:26.0.0-alpha1'
 }
