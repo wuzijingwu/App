@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Iview {
-//    3027
+    //    3027
     private String uid = "71";
     private NewsPresenter presenter;
     private CheckBox mCheckbox2;
@@ -51,8 +51,6 @@ public class MainActivity extends AppCompatActivity implements Iview {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EventBus.getDefault().register(this);
-
-
         presenter = new NewsPresenter();
         presenter.attachView(this);
         delPresenter = new DelPresenter();
@@ -70,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements Iview {
         });
 
     }
+
     private void initView() {
         mElv = (ExpandableListView) findViewById(R.id.elv);
         mCheckbox2 = (CheckBox) findViewById(R.id.checkbox2);
@@ -79,9 +78,9 @@ public class MainActivity extends AppCompatActivity implements Iview {
 
     @Override
     public void onSuccess(Object o) {
-        if(o!=null){
-            List<DatasBean> list = (List<DatasBean> )o;
-            if(list!=null){
+        if (o != null) {
+            List<DatasBean> list = (List<DatasBean>) o;
+            if (list != null) {
                 groupList.addAll(list);
                 for (int i = 0; i < list.size(); i++) {
                     List<DatasBean.ListBean> datas = list.get(i).getList();
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements Iview {
 
                 adapter.changeAllListCbState(true);
                 mElv.setGroupIndicator(null);
-                for (int i=0;i<groupList.size();i++){
+                for (int i = 0; i < groupList.size(); i++) {
                     mElv.expandGroup(i);
                 }
 
@@ -108,13 +107,13 @@ public class MainActivity extends AppCompatActivity implements Iview {
 
     @Override
     public void delSuccess(MessageBean listMessageBean) {
-        Toast.makeText(this,listMessageBean.getMsg(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, listMessageBean.getMsg(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        presenter.getData(uid,pid);
+        presenter.getData(uid, pid);
 
     }
 
@@ -127,17 +126,18 @@ public class MainActivity extends AppCompatActivity implements Iview {
     @Subscribe
     public void onMessageEvent(PriceAndCountEvent event) {
         mTvNum.setText("结算(" + event.getCount() + ")");
-        mTvPrice.setText("￥"+event.getPrice() );
+        mTvPrice.setText("￥" + event.getPrice());
     }
+
     @Subscribe
     public void onMessageEvent(SomeId event) {
         pid = event.getPid();
-        Log.e("zxz","我得到了pid:"+pid);
-        delPresenter.getData(uid,pid);
-
+        Log.e("zxz", "我得到了pid:" + pid);
+        delPresenter.getData(uid, pid);
 
 
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
